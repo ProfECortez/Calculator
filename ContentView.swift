@@ -44,8 +44,8 @@ struct ContentView: View {
     }
     
     private func calculate() {
-        let expression = NSExpression(format: display)
-        if let result = expression.expressionValue(with: nil, context: nil) as? Double {
+        let calculatedDisplay = NSExpression(format: display)
+        if let result = calculatedDisplay.expressionValue(with: nil, context: nil) as? Double {
             display = "\(result)"
         } else {
             display = "Error"
